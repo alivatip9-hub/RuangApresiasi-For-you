@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ruang Apresiasi adalah tempat berbagi cerita, semangat, dan apresiasi untuk semua orang." />
+    <title>Ruang Apresiasi</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to bottom, #d2691e, #ffdead);
+        color: #0c0c0c;
+        scroll-behavior: smooth;
+      }
+
+      .container {
+        color: #0c0c0c;
+      }
+
+      section {
+        min-height: 100vh;
+        padding: 50px;
+        background: url("media2/foto12.jpg") no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+
+      p {
+        max-width: 800px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        font-size: 1.1em;
+      }
+
+      form input,
+      form textarea,
+      form select {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 80%;
+        border-radius: 8px;
+        border: none;
+      }
+
+      form button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        background: #8b4513;
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      /* Daun gugur emoji 🍂 */
+      .leaf {
+        position: fixed;
+        top: -10vh;
+        font-size: 2em;
+        animation: fall 10s linear infinite;
+        opacity: 0.8;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(0) rotate(0);
+        }
+        100% {
+          transform: translateY(110vh) rotate(360deg);
+        }
+      }
+
+      table {
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid white;
+        padding: 8px 12px;
+      }
+
+      blockquote {
+        font-style: italic;
+        margin: 20px auto;
+        max-width: 700px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        border-left: 5px solid #fff;
+      }
+
+      /* Style love terbang */
+      .love {
+        position: fixed;
+        font-size: 2rem;
+        color: red;
+        animation: fly 3s linear forwards;
+        pointer-events: none;
+      }
+
+      @keyframes fly {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh) scale(2);
+          opacity: 0;
+        }
+      }
+
+      .btn-okay {
+        padding: 12px 25px;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 12px;
+        background: #ff1493;
+        color: white;
+        cursor: pointer;
+      }
+
+      /* Tombol Love dan bunga */
+      .btn-love {
+        padding: 12px 25px;
+        font-size: 1.1em;
+        background: #e63946;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn-love:hover {
+        background: #d62828;
+      }
+
+      .flower {
+        position: fixed;
+        bottom: 0;
+        font-size: 24px;
+        animation: floatUp 4s linear forwards;
+      }
+
+      @keyframes floatUp {
+        from {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(-120vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      /* Foto di halaman awal */
+      .photo-container {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .profile-photo {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Emoji daun jatuh -->
+    <div class="leaf" style="left: 10%">🍂</div>
+    <div class="leaf" style="left: 30%; animation-delay: 2s">🍁</div>
+    <div class="leaf" style="left: 50%; animation-delay: 4s">🍂</div>
+    <div class="leaf" style="left: 70%; animation-delay: 1s">🍁</div>
+    <div class="leaf" style="left: 90%; animation-delay: 3s">🍂</div>
+
+    <!-- Halaman 1 -->
+    <nav>
+      <a href="#page1">Home</a> | 
+      <a href="#page2">Form</a> | 
+      <a href="#page3">Video</a> |
+      <a href="#page4">Tabel</a>
+    </nav>
+    <section id="page1">
+     <section class="container">
+      <h1>🌟 Ruang Apresiasi 🌟</h1>
+      <div class="photo-container">
+        <figure>
+            <img src="media2/foto 1.jpg" alt="Foto kamu" class="profile-photo" />
+            <figcaption><em><sub>Foto kenangan berharga</sub></em></figcaption>
+          </figure>
+      </div>
+
+      <p>
+        Alasan saya membuat website ini karena saya tahu bahwa tidak semua orang
+        mendapatkan apresiasi dari orang sekitarnya. Tidak semua orang punya
+        banyak teman, keluarga yang harmonis, dan lingkungan kerja yang sehat.
+        Ruang ini hadir untukmu, agar kamu tahu bahwa keberadaanmu dan
+        pencapaianmu itu <mark><u>berharga</u></mark>.
+      </p></section></div>
+      <a href="#page2">👉 <sup>Bagikan ceritamu</sup></a>
+      <hr>
+    </section>
+
+    
+    <!-- Halaman 2 -->
+    <section id="page2">
+      <h1>✨ Bagikan Ceritamu ✨</h1>
+      <form data-purpose="apresiasi-form">
+        <input type="text" placeholder="Nama kamu..." required />
+        <textarea
+          placeholder="Tuliskan apresiasi yang ingin kamu sampaikan..."
+          required
+        ></textarea>
+        <input type="email" placeholder="Email kamu..." required />
+        <input list="hobi" placeholder="Pilih hobi kamu">
+        <datalist id="hobi">
+          <option value="Membaca">
+          <option value="Menulis">
+          <option value="Olahraga">
+        </datalist>
+        <select required>
+          <option value="">Pilih suasana hati kamu saat ini</option>
+          <option>😊 Bahagia</option>
+          <option>😔 Sedih</option>
+          <option>😤 Lelah</option>
+          <option>🤗 Bersemangat</option>
+        </select>
+        
+        <abbr>Pilih gender:</abbr>
+        <label><input type="radio" name="gender" value="L"> Laki-laki</label>
+        <label><input type="radio" name="gender" value="P"> Perempuan</label><br>
+        <label><input type="checkbox" name="syarat"> Saya setuju dengan syarat</label><br>
+
+        <label><sup> <pre>foto kenangan: </pre></sup><input type="file" /></label>
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+      </form>
+      <p
+        id="successMsg"
+        style="display: none; margin-top: 15px; font-weight: bold; color: #fff"
+      >
+        ✅ <code> terimakasih, ceritamu sudah terkirim!</code>
+      </p>
+    </section>
+
+    <!-- Halaman 3 -->
+    <section id="page3">
+      <h1>💖 Untukmu yang Merasa Sendiri 💖</h1>
+      <video
+        controls
+        poster="media2/Gambar WhatsApp 2025-05-29 pukul 22.32.35_79f49276.jpg"
+        width="580"
+        height="400"
+        aria-describedby="video-desc">
+        <source src="media2/video 2.mp4" type="video/mp4" />
+        Browser kamu tidak mendukung video.
+      </video>
+      
+      <a href="https://id.wikipedia.org/wiki/Apresiasi">Baca tentang apresiasi di Wikipedia</a>
+      
+      <div class="container">
+        <article>
+          <p>
+            Hai, aku cuma mau bilang...aku liat kamu. Aku tau kadang hidup tuh ngga
+            gampang, kadang ngerasa sendirian, dan ngga banyak orang yang peduli
+            sama apa yang kamu lakuin. Mungkin ayah, mamah, adik atau kakak kamu ga
+            peduli atas pencapaianmu. Mereka ga selalu ada, bahkan ga punya waktu
+            untuk bahas tentang dirimu, masalahmu, dan pencapaianmu. Tapi aku mau
+            kamu tau, semua usaha, keberanian, dan pencapaianmu itu penting. Kamu
+            hebat tetap berjuang, meski kadang rasanya hampir ga sanggup, kehilangan
+            arah, dan ga tau lagi gimana cara bertahan tapi kamu mampu
+            melewatinya. Jangan biarin kurangnya perhatian dari orang lain bikin
+            kamu ragu sama dirimu sendiri. Kamu berharga. Kamu berarti. Setiap hal
+            kecil yang kamu capai layak dihargai. Ingat:
+            <strong>"Langit ga selamanya mendung, pasti nanti akan cerah."</strong>
+            🌤 
+          </p>
+
+        </article>
+      </div>
+      <blockquote>
+        “Teruslah bertahan, untuk dirimu sendiri. Karena kamu layak mendapatkan
+        kebahagiaan, meskipun dunia di sekitarmu tidak selalu mendukung.”
+      </blockquote>
+    </section>
+
+    <!-- Halaman 4 -->
+    <section id="page4">
+      <h1>🌍 Kamu Tidak Sendiri 🌍</h1>
+      <p>Beberapa hal kecil yang bisa kamu lakukan untuk tetap kuat:</p>
+      <ul>
+        <li>Menulis pencapaian kecilmu setiap hari 📓</li>
+        <li>Menghargai diri sendiri dengan istirahat cukup 😴</li>
+        <li>Mencari lingkungan positif meski kecil 🌱</li>
+      </ul>
+      <dl>
+        <dt>Apresiasi</dt>
+        <dd>Penghargaan atas usaha atau pencapaian seseorang.</dd>
+        <dt>Motivasi</dt>
+        <dd>Dorongan untuk terus maju.</dd>
+      </dl>
+      <ol>
+        <li>Tarik napas dalam</li>
+        <li>Tulis hal yang disyukuri</li>
+        <li>Tersenyum 😊</li>
+      </ol>
+
+      <p>Contoh perbandingan suasana hati dari respon pengguna:</p>
+      <table>
+        <caption>Data Suasana Hati Pengunjung</caption>
+        <thead>
+          <tr><th>Nama</th><th>Suasana Hati</th><th>Apresiasi</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ani</td><td>😊 Bahagia</td><td>Aku Berhasil Menyelesaikan tugas</td></tr>
+          <tr><td>Budi</td><td>😔 Sedih</td><td>Tetap berusaha walau gagal</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td colspan="3">Total: 2 respon</td></tr>
+        </tfoot>
+      </table>
+      <p>Lagu ini mungkin bisa menemanimu 🎶:</p>
+      <audio controls>
+        <source src="media2/audio 1.mp3" type="audio/mpeg" />
+        Browser kamu tidak mendukung audio.
+      </audio>
+      
+    </section>
+
+    <!-- Halaman 5 -->
+    <section id="page5">
+      <h1>🎁 Hadiah Untukmu 🎁</h1>
+      <q style="font-size: 1.3em; margin-bottom: 20px">
+        You are great, always be happy okay?
+      </q>
+      <button class="btn-okay" onclick="releaseLove()">Okay</button>
+      <hr >
+    </section>
+    <hr >
+    
+    <!-- Halaman 6 -->
+    <section id="page6">
+      <h1>🌸 Terima Kasih 🌸</h1>
+      <p style="font-size: 1.2em; margin-bottom: 20px">
+        Terima kasih sudah mengunjungi <b>Ruang Apresiasi</b> 🌈<br />
+        Semoga kata-kata kecil ini bisa membuatmu merasa dihargai dan lebih
+        bersemangat untuk melangkah ke depan ✨<br /><br />
+      <p title="Pesan semangat">Jangan lupa, <strong>kamu berharga</strong> dan selalu layak untuk <em>bahagia</em>💖</p></p>
+      <time datetime="2025-09-03"><strong>Hari ini </strong></time> <strong>adalah awal baru ✨</strong>
+      <button class="btn-love" onclick="releaseFlowers()">Love</button>
+    </section>
+
+    <script>
+      // Form halaman 2
+      const form = document.querySelector("#page2 form");
+      const successMsg = document.getElementById("successMsg");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        successMsg.style.display = "block";
+        successMsg.style.opacity = 0;
+        successMsg.style.transition = "opacity 0.8s ease-in-out";
+        setTimeout(() => {
+          successMsg.style.opacity = 1;
+        }, 100);
+        form.reset();
+      });
+
+      // Fungsi love halaman 5
+      function releaseLove() {
+        for (let i = 0; i < 20; i++) {
+          const love = document.createElement("div");
+          love.classList.add("love");
+          love.innerHTML = "❤";
+          love.style.left = Math.random() * 100 + "vw";
+          love.style.bottom = "0";
+          love.style.animationDelay = Math.random() * 0.5 + "s";
+          document.body.appendChild(love);
+          setTimeout(() => love.remove(), 3000);
+        }
+      }
+
+      // Fungsi bunga halaman 6
+      function releaseFlowers() {
+        for (let i = 0; i < 25; i++) {
+          const flower = document.createElement("div");
+          flower.classList.add("flower");
+          flower.innerHTML = "🌹";
+          flower.style.left = Math.random() * 100 + "vw";
+          flower.style.bottom = "0";
+          flower.style.fontSize = Math.random() * 20 + 20 + "px";
+          flower.style.animationDelay = Math.random() * 1 + "s";
+          document.body.appendChild(flower);
+          setTimeout(() => flower.remove(), 4000);
+        }
+      }
+    </script>
+  </body>
+</html>
